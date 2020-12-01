@@ -1,0 +1,86 @@
+//Machine Problem 5
+// Least Square Methods
+
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main()
+
+{
+    
+    double x1, y1, x2, y2, x3, y3, x4, y4, x5, y5;
+    double summx, summy, xsq, xy;
+    double a, b;
+  
+    
+    cout << " This program will let you enter 5 sets of coordinates in finding a and b using the method of least squares "; 
+    cout << endl;
+    cout << endl;
+    
+    cout << " Enter x1 = ";
+    cin >> x1;
+    
+    cout << " Enter y1 = ";
+    cin >> y1;
+    cout << endl;
+ 
+    
+    cout << " Enter x2 = ";
+    cin >> x2;
+    
+    cout << " Enter y2 = ";
+    cin >> y2;
+    cout << endl;
+ 
+    
+    cout << " Enter x3 = ";
+    cin >> x3;
+    
+    cout << " Enter y3 = ";
+    cin >> y3;
+    cout << endl;
+ 
+      
+    cout << " Enter x4 = ";
+    cin >> x4;
+
+    cout << " Enter y4 = ";
+    cin >> y4;
+    cout << endl;
+ 
+      
+    cout << " Enter x5 = ";
+    cin >> x5;
+
+    
+    cout << " Enter y5 = ";
+    cin >> y5;
+    cout << endl;
+  
+    
+    summx = x1+x2+x3+x4+x5;
+    summy = y1+y2+y3+y4+y5;
+    xsq = (x1*x1)+(x2*x2)+(x3*x3)+(x4*x4)+(x5*x5);
+    xy = (x1*y1)+(x2*y2)+(x3*y3)+(x4*y4)+(x5*y5);
+
+	a = (5*xy-(summx*summy))/(5*xsq-(summx*summx));
+	b = (summy-(a*summx))/5;
+	
+	cout << "summation x = " << summx << endl;
+	cout << "summation y = " << summy << endl;
+	cout << "summation x^2 = " << xsq << endl;
+	cout << "summation xy = " << xy << endl;
+	cout << endl;
+	
+	cout << " a = " << a << endl;
+	cout << " b = " << b << endl;
+	cout << endl; 
+	
+	cout << " y = " << a <<"x + "<< b; 
+	
+_getch();
+return 0;
+
+}
